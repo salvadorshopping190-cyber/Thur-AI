@@ -223,3 +223,72 @@ setInterval(()=>{
 logo.style.filter="brightness("+(1+Math.random()*0.5)+")";
 
 },250);
+/*====================================
+      PARTE 5
+====================================*/
+
+// Poeira espacial
+
+const dustContainer=document.getElementById("particles");
+
+for(let i=0;i<250;i++){
+
+const d=document.createElement("div");
+
+d.className="spaceDust";
+
+d.style.left=Math.random()*100+"vw";
+
+d.style.top=Math.random()*100+"vh";
+
+d.style.animationDuration=(5+Math.random()*10)+"s";
+
+d.style.animationDelay=Math.random()*5+"s";
+
+dustContainer.appendChild(d);
+
+}
+
+// Piscar estrelas
+
+setInterval(()=>{
+
+stars.forEach(star=>{
+
+star.alpha=Math.random();
+
+});
+
+},300);
+
+// Pulso da estrela central
+
+const core=document.querySelector(".core-light");
+
+setInterval(()=>{
+
+core.style.boxShadow=`
+
+0 0 ${40+Math.random()*30}px white,
+
+0 0 ${90+Math.random()*80}px #6f7dff,
+
+0 0 ${180+Math.random()*100}px #8b3fff
+
+`;
+
+},250);
+
+// Tremor suave da câmera
+
+let angle=0;
+
+setInterval(()=>{
+
+angle+=0.02;
+
+document.querySelector(".container").style.transform=
+
+`translate(-50%,-50%) translate(${Math.sin(angle)*2}px,${Math.cos(angle)*2}px)`;
+
+},16);
