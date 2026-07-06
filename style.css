@@ -348,3 +348,132 @@ box-shadow:
 0 0 90px #b070ff;
 
 }
+/*====================================
+      PARTE 5 - PREMIUM
+====================================*/
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+width:1200px;
+height:1200px;
+
+left:50%;
+top:50%;
+
+transform:translate(-50%,-50%);
+
+border-radius:50%;
+
+background:radial-gradient(circle,
+
+rgba(130,90,255,.20),
+
+rgba(80,60,255,.08),
+
+transparent 70%);
+
+filter:blur(80px);
+
+animation:haloMove 8s ease-in-out infinite;
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+@keyframes haloMove{
+
+0%{
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+50%{
+
+transform:translate(-50%,-50%) scale(1.15);
+
+}
+
+100%{
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+}
+
+/* Poeira espacial */
+
+.spaceDust{
+
+position:absolute;
+
+width:2px;
+
+height:2px;
+
+background:white;
+
+border-radius:50%;
+
+opacity:.35;
+
+animation:dustFloat linear infinite;
+
+}
+
+@keyframes dustFloat{
+
+0%{
+
+transform:translateY(0);
+
+opacity:.2;
+
+}
+
+50%{
+
+opacity:.8;
+
+}
+
+100%{
+
+transform:translateY(-120px);
+
+opacity:.2;
+
+}
+
+}
+
+/* Estrelas piscando */
+
+.twinkle{
+
+animation:twinkle 2s infinite;
+
+}
+
+@keyframes twinkle{
+
+0%,100%{
+
+opacity:.3;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+}
