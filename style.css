@@ -1,0 +1,237 @@
+/* ===========================
+   METEOROS
+=========================== */
+
+.meteor{
+position:absolute;
+width:220px;
+height:3px;
+background:linear-gradient(90deg,#fff,#7d8cff,transparent);
+border-radius:50px;
+filter:blur(1px);
+box-shadow:
+0 0 10px white,
+0 0 25px #7d8cff,
+0 0 50px #7d8cff;
+animation:meteor linear infinite;
+opacity:.9;
+}
+
+.meteor1{
+top:5%;
+left:-25%;
+animation-duration:4s;
+animation-delay:0s;
+}
+
+.meteor2{
+top:20%;
+left:-35%;
+animation-duration:6s;
+animation-delay:2s;
+}
+
+.meteor3{
+top:45%;
+left:-30%;
+animation-duration:5s;
+animation-delay:4s;
+}
+
+.meteor4{
+top:65%;
+left:-40%;
+animation-duration:7s;
+animation-delay:1s;
+}
+
+@keyframes meteor{
+
+0%{
+transform:translate(0,0) rotate(25deg);
+opacity:0;
+}
+
+10%{
+opacity:1;
+}
+
+100%{
+transform:translate(1800px,900px) rotate(25deg);
+opacity:0;
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.cards{
+
+display:flex;
+gap:20px;
+margin-top:60px;
+flex-wrap:wrap;
+justify-content:center;
+
+}
+
+.card{
+
+width:180px;
+padding:18px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.12);
+
+border-radius:18px;
+
+backdrop-filter:blur(12px);
+
+transition:.35s;
+
+box-shadow:
+0 0 15px rgba(140,90,255,.2);
+
+}
+
+.card:hover{
+
+transform:translateY(-8px) scale(1.05);
+
+box-shadow:
+0 0 35px rgba(140,90,255,.6);
+
+}
+
+.icon{
+
+font-size:42px;
+
+margin-bottom:12px;
+
+}
+
+.card h3{
+
+margin-bottom:8px;
+
+font-size:18px;
+
+}
+
+.card p{
+
+font-size:13px;
+
+opacity:.7;
+
+line-height:20px;
+
+}
+
+/* ===========================
+   STATUS
+=========================== */
+
+.status{
+
+margin-top:25px;
+
+font-size:18px;
+
+letter-spacing:3px;
+
+animation:blink 1.4s infinite;
+
+}
+
+@keyframes blink{
+
+0%,100%{
+
+opacity:1;
+
+}
+
+50%{
+
+opacity:.35;
+
+}
+
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media(max-width:900px){
+
+.logo{
+
+font-size:58px;
+
+}
+
+.subtitle{
+
+font-size:13px;
+
+text-align:center;
+
+padding:0 20px;
+
+}
+
+.progress{
+
+width:90%;
+
+}
+
+.cards{
+
+gap:12px;
+
+}
+
+.card{
+
+width:150px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.logo{
+
+font-size:42px;
+
+letter-spacing:4px;
+
+}
+
+.star-center{
+
+transform:scale(.75);
+
+}
+
+.card{
+
+width:130px;
+
+padding:14px;
+
+}
+
+.icon{
+
+font-size:30px;
+
+}
+
+  }
