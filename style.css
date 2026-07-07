@@ -60,6 +60,7 @@ opacity:1;
 transform:translate(1800px,900px) rotate(25deg);
 opacity:0;
 }
+}
 
 /* ===========================
    CARDS
@@ -656,4 +657,5 @@ left:-80px;
 
 left:110%;
 
+   }
    }
