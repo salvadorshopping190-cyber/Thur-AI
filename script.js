@@ -85,7 +85,15 @@ length:180+Math.random()*120
 
 }
 
-setInterval(createMeteor,2500);
+setInterval(()=>{
+
+if(meteors.length < 10){
+
+createMeteor();
+
+}
+
+},2500);
 
 /* ============================
       ANIMAÇÃO
