@@ -239,6 +239,28 @@ logo.style.filter="brightness("+(1+Math.random()*0.5)+")";
 
 const dustContainer=document.getElementById("particles");
 
+if(dustContainer){
+
+for(let i=0;i<250;i++){
+
+const d=document.createElement("div");
+
+d.className="spaceDust";
+
+d.style.left=Math.random()*100+"vw";
+
+d.style.top=Math.random()*100+"vh";
+
+d.style.animationDuration=(5+Math.random()*10)+"s";
+
+d.style.animationDelay=Math.random()*5+"s";
+
+dustContainer.appendChild(d);
+
+}
+
+}
+
 for(let i=0;i<250;i++){
 
 const d=document.createElement("div");
