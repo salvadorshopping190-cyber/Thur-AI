@@ -322,3 +322,29 @@ document.querySelector(".container").style.transform=
 `translate(-50%,-50%) translate(${Math.sin(angle)*2}px,${Math.cos(angle)*2}px)`;
 
 },16);
+
+/*====================================
+        PARTE 6 - ESTRELA CENTRAL
+====================================*/
+
+// Pulso da estrela central
+
+const core = document.querySelector(".core-light");
+
+if(core){
+
+setInterval(()=>{
+
+core.style.boxShadow=`
+
+0 0 ${40+Math.random()*30}px white,
+
+0 0 ${90+Math.random()*80}px #6f7dff,
+
+0 0 ${180+Math.random()*100}px #8b3fff
+
+`;
+
+},250);
+
+}
